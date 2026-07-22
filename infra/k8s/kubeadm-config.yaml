@@ -1,0 +1,10 @@
+apiVersion: kubeadm.k8s.ec2.aws.upbound.io/v1beta1
+kind: ClusterConfiguration
+metadata:
+  name: kubeadm-config
+spec:
+  clusterName: dev
+  kubernetesVersion: "1.32.0"
+  networking:
+    podSubnet: "[192.168.0.0/16]"
+---
