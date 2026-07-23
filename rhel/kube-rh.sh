@@ -54,15 +54,15 @@ sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 # 9. Enable kubelet service
 sudo systemctl enable --now kubelet
 
-# 10. Initialise the Kubernetes control-plane
-sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+# # 10. Initialise the Kubernetes control-plane
+# sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 
-# 11. Set up kubeconfig for the current user
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+# # 11. Set up kubeconfig for the current user
+# mkdir -p $HOME/.kube
+# sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+# sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-# 12. Deploy Calico network
-kubectl apply -f https://projectcalico.org/manifests/calico.yaml
+# # 12. Deploy Calico network
+# kubectl apply -f https://projectcalico.org/manifests/calico.yaml
 
-echo "Kubernetes cluster setup complete."
+# echo "Kubernetes cluster setup complete."
